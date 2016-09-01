@@ -4,6 +4,7 @@ var ISTANBUL = require('istanbul'),
     Collector = ISTANBUL.Collector;
 var inherits = require('mocha').utils.inherits;
 var SPEC = require('mocha').reporters.spec
+var ISTANBUL_REMAP = require('remap-istanbul/lib/remap');
 
 /**
  * Expose `Istanbul`.
@@ -38,6 +39,7 @@ function Istanbul(runner) {
             collector = new Collector();
 
         collector.add(cov);
+        collector = ISTANBUL_REMAP(collector.getFinalCoverage());
 
         reporters.forEach(function(reporter) {
             Report.create(reporter, opts).writeReport(collector, true);
