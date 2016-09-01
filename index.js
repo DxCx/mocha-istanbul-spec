@@ -2,6 +2,8 @@ var ISTANBUL = require('istanbul'),
 
     Report = ISTANBUL.Report,
     Collector = ISTANBUL.Collector;
+var inherits = require('mocha').utils.inherits;
+var SPEC = require('mocha').reporters.spec
 
 /**
  * Expose `Istanbul`.
@@ -15,6 +17,7 @@ exports = module.exports = Istanbul;
  * @public
  */
 function Istanbul(runner) {
+    SPEC.call(this, runner);
 
     runner.on('end', function(){
 
@@ -43,3 +46,5 @@ function Istanbul(runner) {
     });
 
 }
+
+inherits(Istanbul, SPEC);
