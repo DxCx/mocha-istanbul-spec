@@ -1,6 +1,6 @@
 {
   "name": "mocha-istanbul-spec",
-  "version": "0.3.0",
+  "version": "0.3.0-remap",
   "description": "Istanbul + Spec code coverage reporter for Mocha",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
