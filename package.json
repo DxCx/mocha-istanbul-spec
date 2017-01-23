@@ -1,6 +1,6 @@
 {
   "name": "mocha-istanbul-spec",
-  "version": "0.3.0-remap",
+  "version": "0.4.0",
   "description": "Istanbul + Spec code coverage reporter for Mocha",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,7 +8,7 @@
   "dependencies": {
     "istanbul": "*",
     "mocha": "*",
-    "remap-istanbul": "^0.6.4"
+    "remap-istanbul": "0.8.4"
   },
   "repository": {
     "type": "git",
